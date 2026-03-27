@@ -9,7 +9,7 @@
     <template v-else-if="product">
       <div class="product-page__layout">
         <div class="product-page__image-wrap">
-          <img class="product-page__image" :src="product.image_url" :alt="product.name" />
+          <img v-if="product.image_url" class="product-page__image" :src="product.image_url" :alt="product.name" />
         </div>
 
         <div class="product-page__info">

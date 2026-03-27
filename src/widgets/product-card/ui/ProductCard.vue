@@ -2,11 +2,13 @@
   <article class="product-card" @click="$router.push(`/product/${product.id}`)">
     <div class="product-card__image-wrap">
       <img
+        v-if="product.thumbnail_url"
         class="product-card__image"
         :src="product.thumbnail_url"
         :alt="product.name"
         loading="lazy"
       />
+      <div v-else class="product-card__no-image" />
     </div>
     <div class="product-card__body">
       <p class="product-card__name">{{ product.name }}</p>
@@ -58,6 +60,11 @@ const formattedDate = new Date(props.product.nearest_delivery_date).toLocaleDate
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.product-card__no-image {
+  width: 100%;
+  height: 100%;
+  background: #e5e7eb;
 }
 .product-card__body {
   padding: 12px;

@@ -4,7 +4,7 @@ export interface Product {
   price_amount: string
   price_currency: string
   stock: number
-  thumbnail_url: string
+  thumbnail_url: string | null
   nearest_delivery_date: string
 }
 
@@ -29,7 +29,7 @@ export interface Offer {
 
 export interface ProductDetail extends Product {
   description: string
-  image_url: string
+  image_url: string | null
   attributes: ProductAttribute[]
   offers: Offer[]
 }

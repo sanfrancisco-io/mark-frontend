@@ -24,7 +24,7 @@ const router = createRouter({
 })
 
 router.beforeEach((to) => {
-  if (to.meta.requiresAuth && !localStorage.getItem('admin_token')) {
+  if (to.meta.requiresAuth && !localStorage.getItem('access_token')) {
     return { path: '/admin/login' }
   }
 })
