@@ -96,10 +96,14 @@ function ratingVariant(rating: string): 'success' | 'warning' | 'default' {
   display: flex;
   gap: 8px;
 }
+.offers {
+  overflow-x: auto;
+}
 .offers__table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
+  min-width: 480px;
 }
 .offers__table th {
   text-align: left;

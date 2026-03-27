@@ -262,4 +262,11 @@ function formatPrice(amount: string, currency: string) {
   color: #9ca3af;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+  .admin__header { flex-direction: column; align-items: flex-start; }
+  .admin__search-input { width: 100%; }
+  .admin__search { flex-direction: column; align-items: flex-start; }
+  .admin__table { display: block; overflow-x: auto; }
+  .admin__td-actions { flex-direction: column; }
+}
 </style>

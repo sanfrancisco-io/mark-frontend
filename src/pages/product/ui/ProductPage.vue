@@ -92,6 +92,14 @@ const formattedPrice = computed(() => {
   gap: 40px;
   align-items: start;
 }
+@media (max-width: 768px) {
+  .product-page__layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .product-page__name { font-size: 18px; }
+  .product-page__price { font-size: 22px; }
+}
 .product-page__image-wrap {
   border-radius: 12px;
   overflow: hidden;

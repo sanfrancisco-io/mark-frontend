@@ -47,6 +47,17 @@ useInfiniteScroll(sentinel, loadMore, loading)
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
+@media (max-width: 1024px) {
+  .catalog__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .catalog__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
 .catalog__footer {
   display: flex;
   justify-content: center;
